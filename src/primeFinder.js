@@ -1,5 +1,5 @@
 function PrimeFinder() {
-
+  this.primes = [2];
 }
 
 PrimeFinder.prototype.isPrime = function(number) {
@@ -9,5 +9,20 @@ PrimeFinder.prototype.isPrime = function(number) {
       if(number % i == 0) return false;
     }
     return true;
+}
+
+PrimeFinder.prototype.getPrimes = function(request) {
+  if (request == 1) {
+    return this.primes;
+  } else {
+    var i = 3;
+    while (this.primes.length < request) {
+      if (this.isPrime(i)) {
+        this.primes.push(i);
+      }
+      i++;
+    }
+  }
+  return this.primes;
 }
 module.exports.PrimeFinder = PrimeFinder;
