@@ -10,7 +10,6 @@ var read = rl.createInterface({
   output: process.stdout
 });
 
-
 var startProgram = function() {
   read.question("How many primes do you want?(minimum of 1)", function (input) {
     if (new InputChecker().isValid(input)) {
