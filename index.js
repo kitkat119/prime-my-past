@@ -16,11 +16,11 @@ var startProgram = function() {
       read.close();
       console.log("Ok, here's your table of the first " + input + " prime numbers:");
       var inputHandler = new InputHandler(new PrimeFinder());
-      var result = inputHandler.handleInput(input);
-      console.log(result);
-      var table = new MultiplicationTable();
-      var final = table.makeTable(result);
-      console.log(final);
+      var primes = inputHandler.handleInput(input);
+      console.log(primes);
+      var mTable = new MultiplicationTable();
+      var table = mTable.makeTable(primes);
+      console.log(table);
     } else {
       console.log("Invalid request, try entering a number again.");
       startProgram();
