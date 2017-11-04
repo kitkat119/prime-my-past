@@ -7,8 +7,8 @@ describe('PrimeFinder', function() {
   EXAMPLE_PRIME2 = 7;
   EXAMPLE_NON_PRIME1 = 4;
   EXAMPLE_NON_PRIME2 = 526;
-  EXAMPLE_NON_PRIME3 = 1;
-  EXAMPLE_NON_PRIME4 = -5;
+  EXAMPLE_NON_PRIME_ONE = 1;
+  EXAMPLE_NON_PRIME_NEGATIVE = -5;
   EXAMPLE_REQUEST = 10;
 
   beforeEach(function() {
@@ -23,8 +23,8 @@ describe('PrimeFinder', function() {
   it('outputs false if a number is not prime', function() {
     expect(primeFinder.isPrime(EXAMPLE_NON_PRIME1)).toBe(false);
     expect(primeFinder.isPrime(EXAMPLE_NON_PRIME2)).toBe(false);
-    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME3)).toBe(false);
-    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME4)).toBe(false);
+    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME_ONE)).toBe(false);
+    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME_NEGATIVE)).toBe(false);
   })
 
   it('has an array of primes', function() {
