@@ -3,14 +3,16 @@ const PrimeFinder = pF.PrimeFinder;
 
 describe('PrimeFinder', function() {
   var primeFinder;
+  EXAMPLE_PRIME1 = 31;
+  EXAMPLE_PRIME2 = 7;
+  EXAMPLE_NON_PRIME1 = 4;
+  EXAMPLE_NON_PRIME2 = 526;
+  EXAMPLE_NON_PRIME3 = 1;
+  EXAMPLE_NON_PRIME4 = -5;
+  EXAMPLE_REQUEST = 10;
 
   beforeEach(function() {
     primeFinder = new PrimeFinder();
-    EXAMPLE_PRIME1 = 31;
-    EXAMPLE_PRIME2 = 7;
-    EXAMPLE_NON_PRIME1 = 4;
-    EXAMPLE_NON_PRIME2 = 526;
-    EXAMPLE_REQUEST = 10;
   })
 
   it('outputs true if a number is prime', function() {
@@ -21,6 +23,8 @@ describe('PrimeFinder', function() {
   it('outputs false if a number is not prime', function() {
     expect(primeFinder.isPrime(EXAMPLE_NON_PRIME1)).toBe(false);
     expect(primeFinder.isPrime(EXAMPLE_NON_PRIME2)).toBe(false);
+    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME3)).toBe(false);
+    expect(primeFinder.isPrime(EXAMPLE_NON_PRIME4)).toBe(false);
   })
 
   it('has an array of primes', function() {

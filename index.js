@@ -2,6 +2,7 @@ var rl = require('readline');
 const PrimeFinder = require('./src/primeFinder').PrimeFinder;
 const InputHandler = require('./src/inputHandler').InputHandler;
 const InputChecker = require('./src/inputChecker').InputChecker;
+const MultiplicationTable = require('./src/multiplicationTable').MultiplicationTable;
 
 var read = rl.createInterface({
   input: process.stdin,
@@ -17,6 +18,9 @@ var startProgram = function() {
       var inputHandler = new InputHandler(new PrimeFinder());
       var result = inputHandler.handleInput(input);
       console.log(result);
+      var table = new MultiplicationTable();
+      var final = table.makeTable(result);
+      console.log(final);
     } else {
       console.log("Invalid request, try entering a number again.");
       startProgram();

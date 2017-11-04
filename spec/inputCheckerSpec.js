@@ -2,12 +2,13 @@ const InputChecker = require('../src/inputChecker').InputChecker;
 
 describe('InputChecker', function() {
   var inputChecker;
+  VALID_REQUEST = 10;
+  INVALID_DECIMAL = 4.5;
+  INVALID_NAN = 'k';
+  INVALID_NEGATIVE = -8;
 
   beforeEach(function() {
     inputChecker = new InputChecker();
-    VALID_REQUEST = 10;
-    INVALID_DECIMAL = 4.5;
-    INVALID_NAN = 'k';
   })
 
   it("outputs true if the request is valid", function() {
@@ -19,5 +20,6 @@ describe('InputChecker', function() {
     expect(inputChecker.isValid(INVALID_NAN)).toEqual(false);
     expect(inputChecker.isValid(Infinity)).toEqual(false);
     expect(inputChecker.isValid(0)).toEqual(false);
+    expect(inputChecker.isValid(INVALID_NEGATIVE)).toEqual(false);
   })
 })
