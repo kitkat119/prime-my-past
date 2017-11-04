@@ -8,10 +8,10 @@ describe('InputHandler', function() {
 
   beforeEach(function() {
     inputHandler = new InputHandler(finderMock);
-  })
+  });
 
   it('handles the request to get the prime numbers', function() {
     inputHandler.handleInput()
     expect(finderMock.getPrimes).toHaveBeenCalled();
-  })
-})
+  });
+});

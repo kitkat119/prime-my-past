@@ -13,11 +13,14 @@ describe ('MultiplicationTable', function() {
 
   beforeEach(function() {
     table = new MultiplicationTable();
-  })
+  });
 
   it('outputs a 2D array of multiplied values', function() {
+    expect(table.makeTable(EXAMPLE_PRIMES_ARRAY1)).toEqual(EXPECTED_PRIMES_TABLE1);
+  });
+
+  it('outputs a 2D array which contains multiplied values at the correct index', function() {
     expect(table.makeTable(EXAMPLE_PRIMES_ARRAY1)[2][1]).toEqual(6);
     expect(table.makeTable(EXAMPLE_PRIMES_ARRAY2)[9][9]).toEqual(529);
-    expect(table.makeTable(EXAMPLE_PRIMES_ARRAY1)).toEqual(EXPECTED_PRIMES_TABLE1);
-  })
-})
+  });
+});
