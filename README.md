@@ -57,4 +57,4 @@ This table data is then passed to an instance of __Printer__, which joins each r
 
  I wasn't sure how to test the output to the console and struggled to find good information about this online. I tried using the jasmine spyOn to check console.log was being called by the Printer function but I'm not sure that this was that good a test really. It would be interesting to find out how to do this in a better way and how to mock the readline output.
 
- I would have liked to have been able to work out how to format the structure of the table as the columns are not in line and it looks quite ugly and confusing. Unfortunately though, I ran out of time!
+ I would have liked to have formatted the structure of the table as the columns are not in line and it looks quite ugly and confusing at the moment. I was thinking each column would need to be as long as the last and so largest number but unfortunately, I ran out of time to work on implementing this.
