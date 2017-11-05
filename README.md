@@ -20,6 +20,9 @@ node index.js
 
 You will be prompted to enter the number of primes you wish to see. This must be a minimum of 1 and cannot be infinity, a decimal, a negative number or zero! If you do try and make an invalid request, you will be prompted to retry. The multiplication table of your chosen number of primes will then be printed!
 
+
+![image](https://user-images.githubusercontent.com/26767598/32414525-0e091566-c221-11e7-933d-3b4f657df643.png)
+
 ## Tests
 
 I wrote this application using Test Driven Development. To run the tests enter this into the terminal:
