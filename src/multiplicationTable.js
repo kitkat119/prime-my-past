@@ -1,7 +1,7 @@
 function MultiplicationTable() {
 }
 
-MultiplicationTable.prototype.makeTable = function(primes) {
+MultiplicationTable.prototype.makeTable = function (primes) {
   var table = [];
   var row1 = [1].concat(primes);
   table.push(row1);
@@ -14,5 +14,5 @@ MultiplicationTable.prototype.makeTable = function(primes) {
   }
   table[0][0] = " ";
   return table;
-}
+};
 module.exports.MultiplicationTable = MultiplicationTable;
