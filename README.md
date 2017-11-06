@@ -25,7 +25,11 @@ You will be prompted to enter the number of primes you wish to see. This must be
 
 ## Tests
 
-I wrote this application using Test Driven Development. To run the tests enter this into the terminal:
+I wrote this application using Test Driven Development. Make sure you have jasmine installed:
+```
+npm install -g jasmine
+```
+To run the tests enter this into the terminal:
 ```
 jasmine
  ```
